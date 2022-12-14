@@ -1,7 +1,18 @@
+import { useDispatch } from "react-redux";
+
 function Increament(){
+    const dispatch=useDispatch();
+    function Plus(){
+        dispatch(
+            {
+                type: "INCREAMENT",
+                payload: 3
+            }
+        )
+    }
     return(
         <>
-            <button >+</button>
+            <button onClick={Plus}>+</button>
         </>
     )
 }

@@ -1,10 +1,19 @@
 import './Decreament.css'
+import { useDispatch } from 'react-redux';
 
 function Decreamnet(){
-
+    const dispatch=useDispatch();
+    function Minus(){
+        dispatch(
+            {
+                type: 'DECREAMENT',
+                payload: 5
+            }
+        )
+    }
     return(
         <>
-            <button>-</button>
+            <button onClick={Minus}>-</button>
         </>
     )
 }

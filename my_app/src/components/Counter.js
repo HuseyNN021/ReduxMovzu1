@@ -5,13 +5,13 @@ import { useSelector } from "react-redux";
 
 
 function Counter() {
-    const count=useSelector(store=>store)
+    const count=useSelector(store=>store.counter)
     console.log(count);
     return (
         <>
             <div className="Counter">
                 <Decreamnet />
-                <h1>0</h1>
+                <h1>{count}</h1>
                 <Increament />
             </div>
         </>
